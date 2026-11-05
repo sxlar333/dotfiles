@@ -1,0 +1,105 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 27,
+    "spacing": 0,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+
+    "modules-left": [
+        "custom/gentoo",
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "custom/wifi",
+        "custom/sep1",
+        "custom/volume",
+        "custom/sep2",
+        "battery",
+        "custom/sep3",
+        "clock"
+    ],
+
+    "custom/gentoo": {
+        "format": "\uf30d",
+        "tooltip": false
+    },
+
+    "custom/sep1": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "custom/sep2": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "custom/sep3": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "persistent-workspaces": {
+            "*": ["1", "2", "3", "4", "5"]
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 48,
+        "separate-outputs": true
+    },
+
+    "custom/wifi": {
+        "exec": "~/.config/waybar/wifi.sh",
+        "interval": 5,
+        "tooltip": false
+    },
+
+    "custom/volume": {
+        "exec": "~/.config/waybar/volume.sh",
+        "interval": 0.5,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    },
+
+    "battery": {
+        "interval": 30,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-full": "󰁹 {capacity}%",
+        "format-icons": [
+            "󰁺",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂"
+        ],
+        "tooltip-format": "{timeTo}  {capacity}%"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    }
+}

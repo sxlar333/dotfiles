@@ -1,0 +1,62 @@
+/* Wofi — Belafonte Day, minimal
+   bg #d4ccb9  fg #45363b  line #958b83  accent #416978 */
+
+* {
+  font-family: "Liberation Mono", monospace;
+  font-size: 13px;
+}
+
+window {
+  border: 1px solid rgba(149, 139, 131, 0.7);
+  border-radius: 8px;
+  background-color: #d4ccb9;
+  color: #45363b;
+}
+
+#outer-box {
+  margin: 10px;
+  background-color: transparent;
+}
+
+#input {
+  margin: 0 0 8px 0;
+  padding: 2px 4px 6px 4px;
+  border: none;
+  border-bottom: 1px solid #958b83;
+  border-radius: 0;
+  background-color: transparent;
+  color: #45363b;
+  caret-color: #416978;
+}
+
+#input image {
+  color: #958b83;
+  padding-right: 4px;
+}
+
+#scroll,
+#inner-box {
+  border: none;
+  background-color: transparent;
+}
+
+#entry {
+  padding: 4px 6px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #45363b;
+}
+
+#entry:selected {
+  background-color: rgba(65, 105, 120, 0.18);
+}
+
+#text {
+  color: #45363b;
+}
+
+#img {
+  margin-right: 6px;
+  background-color: transparent;
+}

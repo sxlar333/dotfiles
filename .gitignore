@@ -1,0 +1,9 @@
+# Editor / shell leftovers
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Never track local backups produced by install.sh
+.dotfiles-backup-*/

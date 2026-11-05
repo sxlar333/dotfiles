@@ -1,0 +1,34 @@
+alias ff='fastfetch'
+alias pf='pfetch'
+alias please='doas'
+alias cmatrix='cmatrix-theme'
+alias icat='kitten icat'
+alias reboot='doas reboot'
+alias anime='ani-cli --dub'
+
+alias ls='ls -laF --color=auto'
+
+# portage
+alias install='doas emerge -av --autounmask=y'
+alias remove='doas emerge --deselect'
+alias select='doas emerge --select'
+alias purge='doas emerge --depclean'
+
+# rebuild everything affected by USE/profile changes
+alias refreshworld='doas emerge -avuDN @world'
+
+# reload env after "eselect profile set"
+alias reload='env-update && source /etc/profile'
+
+alias src='source ~/.mkshrc'
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"
+
+# local binaries
+export PATH="$HOME/.local/bin:$PATH"
+
+# ctrl+l clear
+bind '^L=clear-screen'
+
+PS1='$PWD $ '

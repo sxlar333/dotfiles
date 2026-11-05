@@ -1,0 +1,158 @@
+* {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    font-family: "IosevkaTermSlab Nerd Font Mono", monospace;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background: #c9c1ae;
+    color: #45363b;
+}
+
+tooltip {
+    background: #d4ccb9;
+    color: #45363b;
+    border: 1px solid #a99f8b;
+    border-radius: 0;
+}
+
+/* ── Beige tab surface ─────────────────────────────────────────────────── */
+
+#custom-volume,
+#battery {
+    background-color: #d4ccb9;
+}
+
+/* Slanted edges on the outer ends of the two tab groups. */
+#custom-gentoo,
+#custom-wifi {
+    background-color: transparent;
+    background-image: linear-gradient(105deg,
+        transparent 8px,
+        #d4ccb9 8px);
+}
+
+#workspaces,
+#clock {
+    background-color: transparent;
+    background-image: linear-gradient(105deg,
+        #d4ccb9 calc(100% - 8px),
+        transparent calc(100% - 8px));
+}
+
+/* Thin diagonal dividers between the segments. */
+#custom-sep1,
+#custom-sep2,
+#custom-sep3 {
+    min-width: 12px;
+    padding: 0 4px;
+    background-color: #d4ccb9;
+    background-image: linear-gradient(105deg,
+        transparent calc(50% - 1px),
+        #a99f8b calc(50% - 1px),
+        #a99f8b 50%,
+        transparent 50%);
+}
+
+/* ── Left ──────────────────────────────────────────────────────────────── */
+
+#custom-gentoo {
+    padding: 0 12px;
+    color: #96522b;
+    font-size: 21px;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    margin: 0;
+    background: transparent;
+    color: #5e5252;
+    font-size: 13px;
+}
+
+#workspaces button:hover {
+    background-image: linear-gradient(105deg,
+        transparent 9px,
+        #d4ccb9 9px,
+        #d4ccb9 calc(100% - 9px),
+        transparent calc(100% - 9px));
+    color: #45363b;
+}
+
+#workspaces button.active {
+    background-image: linear-gradient(105deg,
+        transparent 9px,
+        #45363b 9px,
+        #45363b calc(100% - 9px),
+        transparent calc(100% - 9px));
+    color: #d4ccb9;
+    font-weight: 700;
+}
+
+#workspaces button.urgent {
+    background-image: linear-gradient(105deg,
+        transparent 9px,
+        #bd100d 9px,
+        #bd100d calc(100% - 9px),
+        transparent calc(100% - 9px));
+    color: #d4ccb9;
+    font-weight: 700;
+}
+
+#window {
+    padding: 0 12px;
+    color: #45363b;
+    font-size: 13px;
+}
+
+#window.empty {
+    color: transparent;
+}
+
+/* ── Right ─────────────────────────────────────────────────────────────── */
+
+#custom-wifi {
+    padding: 0 13px;
+    color: #416978;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#custom-volume {
+    padding: 0 15px;
+    color: #96522b;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#battery {
+    padding: 0 15px;
+    color: #45363b;
+    font-size: 15px;
+}
+
+#battery.warning {
+    color: #96522b;
+}
+
+#battery.critical {
+    color: #bd100d;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #416978;
+}
+
+#clock {
+    padding: 0 15px;
+    color: #45363b;
+    font-size: 15px;
+    font-weight: 700;
+}
