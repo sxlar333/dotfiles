@@ -1,7 +1,6 @@
 # dotfiles
 
-My non-personal Linux dotfiles. Everything here is safe to publish: no SSH
-keys, tokens, browser profiles, shell history, caches, or personal documents.
+My non-personal Gentoo Linux dotfiles.
 
 The theme across the setup is **Belafonte Day** (a light palette); kitty,
 Neovim, waybar, wofi, cmatrix and the 2bwm/Xresources colors are kept in sync.
@@ -44,21 +43,6 @@ cd ~/dotfiles && ./install.sh --uninstall
 | `.config/opencode/cli.json` | OpenCode CLI prefs |
 | `.config/nvim/` | Neovim config based on [NvChad/starter](https://github.com/NvChad/starter) |
 
-## Deliberately excluded
-
-Personal or machine-specific data is kept out of this repo, including:
-
-- `~/.gitconfig` (name/email identity)
-- `~/.config/gh/` (GitHub OAuth token)
-- `~/.config/opencode/service.json` (contains a secret)
-- `~/.ssh/`, `~/.pki/`, `~/.Xauthority`
-- Browser profiles (`~/.config/mozilla/`)
-- Shell and Vim history, swap files
-- `~/.cache/`, `~/.local/`, Steam and game data
-- `~/.config/obs-studio/`, `~/.config/unity3d/`, `~/.config/pulse/`, `~/.config/dconf/`
-- Fonts (`~/.fonts/`, ~640 MB) and compiled binaries
-- Third-party Vim plugins (`~/.vim/plugin/auto-pairs`)
-
 For Vim autopairs, install the plugin separately:
 
 ```sh
@@ -79,4 +63,4 @@ Terminal font: **IosevkaTermSlab Nerd Font Mono**. Neovim bootstraps
 
 - Hyprland starts `swaybg` with a wallpaper from `~/Downloads`; adjust that line
   if the image is not present.
-- `~/Downloads` and other user files are never tracked.
+
